@@ -5,8 +5,8 @@
   --card-bg-color: #f5f5f5;
   --text-color: #555;
   --blockquote-color: #666;
-  --link-color: #2a6496;
-  --link-hover-color: #1a4060;
+  --link-color: #555;
+  --link-hover-color: #222;
   --brand-color: #f0adb4;
   --brand-hover-color: #222;
   --table-row-odd-bg-color: #f9f9f9;
@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #05eb63;
+  background: #38ff94;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2647,16 +2647,18 @@ a.index-a {
 }
 .post-gallery {
   width: 100%;
+  max-width: 50%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 15px !important;
+  padding: 0;
 }
 .index-gallery-image {
   max-width: 100%;
-  height: 250px;
-  object-fit: contain;
+  height: auto;
   display: block;
   margin: 0 auto 15px;
 }
@@ -2762,14 +2764,14 @@ a.index-a {
   margin: 2.5em 0;
 }
 .post-body a {
-  color: #2a6496;
+  color: #555;
   text-decoration: none;
-  border-bottom: 1px solid rgba(42,100,150,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
   transition: color 0.2s, border-color 0.2s;
 }
 .post-body a:hover {
-  color: #1a4060;
-  border-bottom-color: rgba(26,64,96,0.5);
+  color: #222;
+  border-bottom-color: rgba(0,0,0,0.4);
 }
 .post-title {
   text-align: center !important;
@@ -2809,7 +2811,7 @@ a.index-a {
   transition: color 0.2s;
 }
 .post-nav-item a:hover {
-  color: #2a6496;
+  color: #222;
 }
 .citation {
   margin-top: 2em;
