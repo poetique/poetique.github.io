@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffffd0;
+  background: #99956a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2622,19 +2622,19 @@ a.index-a {
 }
 .index-title {
   text-align: center !important;
-  font-family: 'Shippori Mincho B1', serif !important;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   letter-spacing: 0.3rem;
   padding-bottom: 1.5rem;
 }
 .index-author {
   text-align: center !important;
-  font-family: 'Shippori Mincho B1', serif !important;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   font-size: clamp(12px, 1vw, 18px);
   letter-spacing: 0.5rem;
   padding-bottom: 1.5rem;
 }
 .index-summary {
-  font-family: 'Shippori Mincho B1', serif !important;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   font-size: clamp(10px, 1vw, 12px);
   overflow: hidden;
   display: -webkit-box;
@@ -2693,7 +2693,7 @@ a.index-a {
   margin-top: 1.5rem !important;
 }
 .post-body {
-  font-family: 'Shippori Mincho B1', serif !important;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   margin: 0 auto;
   padding: 0 0.5rem;
   text-align: justify;
@@ -2722,7 +2722,7 @@ a.index-a {
   margin-bottom: 1em;
   padding-bottom: 0.4em;
   border-bottom: 1px solid rgba(0,0,0,0.08);
-  font-family: 'Klee One', 'Shippori Mincho B1', serif;
+  font-family: 'Klee One', "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-align: left;
@@ -2730,7 +2730,7 @@ a.index-a {
 .post-body h3 {
   margin-top: 2em;
   margin-bottom: 0.8em;
-  font-family: 'Klee One', 'Shippori Mincho B1', serif;
+  font-family: 'Klee One', "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-align: left;
@@ -2775,11 +2775,29 @@ a.index-a {
 }
 .post-title {
   text-align: center !important;
-  font-family: 'Shippori Mincho B1', serif !important;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   letter-spacing: 0.3rem;
   padding-bottom: 1.5rem;
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.5;
+}
+.post-title a,
+.post-title .post-title-link {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+.post-title a::before,
+.post-title .post-title-link::before {
+  display: none !important;
+}
+.post-title a:hover,
+.post-title .post-title-link:hover {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+.post-title a:hover::before,
+.post-title .post-title-link:hover::before {
+  display: none !important;
 }
 .post-meta {
   text-align: center !important;
@@ -2848,7 +2866,7 @@ h1.site-title {
   max-width: 100%;
 }
 .subtitle {
-  font-family: 'Shippori Mincho B1', serif;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif;
   letter-spacing: 1.2rem;
   font-size: 1rem;
 }
@@ -2914,7 +2932,7 @@ div#no-result {
     line-height: 1.9;
   }
   .post-title {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
     letter-spacing: 0.15rem;
     padding-bottom: 1rem;
   }
