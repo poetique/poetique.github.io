@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffa62e;
+  background: #44ffd6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2884,15 +2884,15 @@ a.index-a {
 }
 .index-post-meta .meta-item a,
 .index-post-meta .meta-item a:visited {
-  color: #1c55a6;
-  border-bottom: 1px solid rgba(28,85,166,0.3);
+  color: #555;
+  border-bottom: none;
   text-decoration: none;
   position: relative; /* ストレッチリンクのz-indexより上にする */
   z-index: 2;
 }
 .index-post-meta .meta-item a:hover {
-  color: #103366;
-  border-bottom-color: #103366;
+  color: #1c55a6;
+  border-bottom: none;
 }
 .post-edit-link {
   font-size: 1rem !important;
