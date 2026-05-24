@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #99956a;
+  background: #ffa62e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2514,32 +2514,75 @@ hr {
 .sub-menu .menu-item {
   display: inline-block;
 }
-.content-index {
-  display: block;
-}
-.post-block-index {
+.next-preview-banner {
   width: 100%;
+  background-color: rgba(213,236,245,0.5);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-top: -55px; /* 余白を相殺して上に詰める */
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  animation: bannerFadeIn 1s ease-out forwards;
 }
-article.post-block-index {
-  margin: 1rem !important;
-  border-left: solid #000 0px !important;
-  border-top: solid #000 0px !important;
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-color: rgba(255,255,255,0.5) !important;
-  background-blend-mode: overlay !important;
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s;
+.next-preview-banner h2,
+.next-preview-banner h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #f0adb4;
+  border-bottom: 2px inset #f0adb4;
+  font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
 }
-article.post-block-index::before {
+.next-preview-banner p {
+  line-height: 1.5;
+  text-align: center;
+}
+.next-preview-banner p:last-child {
+  margin-bottom: 0;
+}
+.content-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  margin-top: -30px;
+}
+/* Ensure pagination spans the full grid width */
+.content-index .pagination {
+  grid-column: 1/-1;
+  margin-top: 2rem;
+}
+.index-post {
+  width: 100%;
+  margin: 0 !important;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative; /* ストレッチリンクの基準 */
+}
+/* カード全体をクリック可能にする（タイトルのリンク領域をカード全体に広げる） */
+.index-post .post-title-link::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background-color: #13c5fd;
-  opacity: 0.72; /* 不透明度 */
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* カテゴリやボタンなどは個別にクリック可能にする */
+.index-post .post-category a,
+.index-post .post-button a,
+.index-post .post-gallery a {
+  position: relative;
+  z-index: 2;
+}
+.index-post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 a.index-a {
   text-decoration: none !important;
@@ -2640,10 +2683,13 @@ a.index-a {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+}
+.index-summary p {
+  margin-bottom: 0 !important;
 }
 .post-gallery {
   width: 100%;
@@ -2777,9 +2823,9 @@ a.index-a {
   text-align: center !important;
   font-family: "Adobe Caslon Pro", "Times New Roman", "Ryumin Light KL", "A-OTF Ryumin Pro L-KL", "A-OTF-RyuminPro-Light", "Ryumin Medium KL", "リュウミン L-KL", "Ryumin Regular KL", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", serif !important;
   letter-spacing: 0.3rem;
-  padding-bottom: 1.5rem;
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  line-height: 1.5;
+  padding-bottom: 1.2rem;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  line-height: 1;
 }
 .post-title a,
 .post-title .post-title-link {
@@ -2805,6 +2851,48 @@ a.index-a {
   font-size: 0.9rem;
   color: #888;
   line-height: 1.8;
+}
+/* 記事一覧のメタ情報の視認性向上（日付、カテゴリ、発表者） */
+.index-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+/* Remove the | separator */
+.post-meta-item::before,
+.meta-item::before {
+  content: none !important;
+  display: none !important;
+}
+.index-post-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0,0,0,0.04);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+}
+.index-post-meta .meta-item i {
+  margin-right: 6px;
+  color: #a0a0a0;
+  font-size: 0.85rem;
+}
+.index-post-meta .meta-item a,
+.index-post-meta .meta-item a:visited {
+  color: #1c55a6;
+  border-bottom: 1px solid rgba(28,85,166,0.3);
+  text-decoration: none;
+  position: relative; /* ストレッチリンクのz-indexより上にする */
+  z-index: 2;
+}
+.index-post-meta .meta-item a:hover {
+  color: #103366;
+  border-bottom-color: #103366;
 }
 .post-edit-link {
   font-size: 1rem !important;
@@ -3010,5 +3098,45 @@ div#no-result {
 @media screen and (max-width: 768px) {
   .content {
     grid-auto-columns: auto;
+  }
+}
+@-moz-keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
